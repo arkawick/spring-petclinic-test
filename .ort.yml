@@ -1,9 +1,7 @@
 analyzer:
-  # Enable only Maven
   enabled_package_managers:
     - Maven
   
-  # Explicitly disable all other package managers
   disabled_package_managers:
     - Bazel
     - Bower
@@ -30,14 +28,5 @@ analyzer:
     - Yarn
     - Yarn2
   
-  # Skip excluded paths/scopes
   skip_excluded: true
-  
-  # Don't allow dynamic versions (for reproducibility)
   allow_dynamic_versions: false
-  
-  # Maven-specific configuration
-  package_managers:
-    Maven:
-      # Force specific Maven version (optional)
-      # maven_version: "3.9.6"
