@@ -1,7 +1,43 @@
 analyzer:
-  enabledPackageManagers:
+  # Enable only Maven
+  enabled_package_managers:
     - Maven
-  disabledPackageManagers:
+  
+  # Explicitly disable all other package managers
+  disabled_package_managers:
+    - Bazel
+    - Bower
+    - Bundler
+    - Cargo
+    - Carthage
+    - CocoaPods
+    - Composer
+    - Conan
+    - DotNet
+    - GoMod
     - Gradle
-    - Npm
-    - Pip
+    - GradleInspector
+    - NPM
+    - NuGet
+    - PIP
+    - Pipenv
+    - PNPM
+    - Poetry
+    - Pub
+    - SBT
+    - SPM
+    - Stack
+    - Yarn
+    - Yarn2
+  
+  # Skip excluded paths/scopes
+  skip_excluded: true
+  
+  # Don't allow dynamic versions (for reproducibility)
+  allow_dynamic_versions: false
+  
+  # Maven-specific configuration
+  package_managers:
+    Maven:
+      # Force specific Maven version (optional)
+      # maven_version: "3.9.6"
