@@ -1,0 +1,7 @@
+analyzer:
+  enabledPackageManagers:
+    - Maven
+  disabledPackageManagers:
+    - Gradle
+    - Npm
+    - Pip
