@@ -65,7 +65,7 @@ jobs:
     - name: Run ORT Analyzer
       run: |
         echo "🔍 Stage 1: Running ORT Analyzer..."
-        ort analyze --enabled-package-managers Maven -i . -o ort-results/analyzer
+        ort analyze -i . -o ort-results/analyzer
       continue-on-error: true
 
     - name: Run ORT Advisor
